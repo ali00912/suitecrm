@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install intl xml zip gd mysqli pdo pdo_mysql
 
 # Copy SuiteCRM files
-. /var/www/html
+COPY . /var/www/html
 
 # Copy Nginx config
 COPY nginx.conf /etc/nginx/nginx.conf
